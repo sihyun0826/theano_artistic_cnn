@@ -17,7 +17,7 @@ python preprocess_img.py
 THEANO_FLAGS='floatX=float32,device=cpu,nvcc.fastmath=True' python artistic_alexnet_inference.py
 
 3) Run artistic_alexnet_train.py :
-THEANO_FLAGS='floatX=float32,device=cpu,nvcc.fastmath=True' python artistic_alexnet_train.py
+THEANO_FLAGS='floatX=float32,device=cpu,nvcc.fastmath=True' python artistic_alexnet_train_rmsprop.py
 
 # References
 
