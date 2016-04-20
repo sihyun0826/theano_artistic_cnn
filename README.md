@@ -2,7 +2,7 @@
 
 Implementation of generating artistic pictures[1] in Theano[2]. We used AlexNet here, even though original work used VGG.
 
-We found out this code is light enough to be run on the CPU only. To enhance convergence speed, we employed RMSprop.
+This code is light enough to be run on the CPU only. To enhance convergence speed, RMSprop is employed for learning rate schedules.
 
 Trained weights are taken from [4]. 
 
