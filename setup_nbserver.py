@@ -2,8 +2,8 @@ import os
 
 home_dir = os.environ['HOME']
 
-if os.path.isdir("$HOME/.ipython/profile_nbserver")is False:
-    os.system("ipython profile create nbserver")
+if os.path.isdir("$HOME/.jupyter/profile_nbserver")is False:
+    os.system("jupyter profile create nbserver")
 else: 
     os.system("echo profile_nbserver is already exist.")
 
@@ -21,7 +21,7 @@ c.NotebookApp.port = 8888
 c.NotebookApp.notebook_dir = u'/'
 """.format(pwsha)
 
-with open(home_dir+"/.ipython/profile_nbserver/ipython_notebook_config.py", "w") as cf:
+with open(home_dir+"/.jupyter/profile_nbserver/jupyter_notebook_config.py", "w") as cf:
     cf.write(config_str)
         
 
