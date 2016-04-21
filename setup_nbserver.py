@@ -7,7 +7,7 @@ if os.path.isdir("$HOME/.jupyter/profile_nbserver")is False:
 else: 
     os.system("echo profile_nbserver is already exist.")
 
-from IPython.lib import passwd
+from notebook.auth import passwd
 pwsha = passwd()
    
 config_str = """
