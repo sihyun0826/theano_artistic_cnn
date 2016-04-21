@@ -70,7 +70,7 @@ class ConvPoolLayer(object):
         return T.sum(T.sum((gram_matrix_gen-gram_matrix_ori)**2))/(4.0*(self.t_style.shape[1]**2)*((self.t_style.shape[2]*self.t_style.shape[3])**2))
 
     def content_error(self):
-        return T.sum(T.sum(T.sum((self.output-self.t_content)**2)))/2.0
+        return T.sum(T.sum(T.sum(T.sqr(self.output-self.t_content))))/2.0
 
 def evaluate_alexnet(batch_size=1):
 
