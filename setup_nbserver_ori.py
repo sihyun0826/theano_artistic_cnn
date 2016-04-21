@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 
-if os.path.isdir("$HOME/.ipython/profile_nbserver")is False:
+if os.path.isdir("$HOME/.jupyter/profile_nbserver")is False:
     os.system("ipython profile create nbserver")
 else: 
     os.system("echo profile_nbserver is already exist.")
@@ -14,7 +14,7 @@ no = set(['no','n'])
 print ("Do you want to reset password? (y/n)")
 choice = raw_input().lower()
 if choice in yes:
-    from IPython.lib import passwd
+    from notebook.auth import passwd
     pwsha = passwd()
    
     config_str = """
@@ -43,11 +43,11 @@ c.NotebookApp.notebookr_dir = u'/home/biadmin/'
 
 home_dir = os.environ['HOME']
 
-with open(home_dir+"/.ipython/profile_nbserver/ipython_notebook_config.py", "w") as cf:
+with open(home_dir+"/.jupyter/profile_nbserver/jupyter_notebook_config.py", "w") as cf:
 	cf.write(config_str)
 
 
-os.system("screen -dRR -dmS ipython_notebook ipython notebook --profile=nbserver;")
+os.system("screen -dRR -dmS jupyter_notebook jupyter notebook --profile=nbserver;")
 
 # https://www.gnu.org/software/screen/manual/screen.html
 # screen install check
