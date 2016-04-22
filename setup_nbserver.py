@@ -43,11 +43,11 @@ c.NotebookApp.notebookr_dir = u'/home/biadmin/'
 
 home_dir = os.environ['HOME']
 
-with open(home_dir+"/.jupyter/profile_nbserver/jupyter_notebook_config.py", "w") as cf:
+with open(home_dir+"/.jupyter/jupyter_notebook_config.py", "w") as cf:
 	cf.write(config_str)
 
 
-os.system("screen -dRR -dmS jupyter_notebook jupyter notebook --profile=nbserver;")
+#os.system("screen -dRR -dmS jupyter_notebook jupyter notebook --profile=nbserver;")
 
 # https://www.gnu.org/software/screen/manual/screen.html
 # screen install check
